@@ -1,4 +1,4 @@
-package com.stolenheart.game.main;
+package com.stolenheart.game.gamestate;
 
 import java.awt.*;
 import java.util.Stack;
@@ -7,10 +7,11 @@ import java.util.Stack;
 
 public class GameStateManager {
 
-    private Stack<GameState> states;
+    public Stack<GameState> states;
 
     public GameStateManager() {
         states = new Stack<GameState>(); //creates a 'stack' of the states, which will be executed in the order that they're added. (Like adding a pause state over the gameplay state, thus pausing the game when it's added.)
+        states.push(new MenuState(this));
     }
 
     public void tick() {

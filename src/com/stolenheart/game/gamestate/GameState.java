@@ -1,4 +1,6 @@
-package com.stolenheart.game.main;
+package com.stolenheart.game.gamestate;
+
+import com.stolenheart.game.gamestate.GameStateManager;
 
 import java.awt.*;
 
@@ -12,8 +14,9 @@ public abstract class GameState {
 
     protected GameStateManager gsm;
 
-    protected GameState(GameStateManager gsm) {
+    public GameState(GameStateManager gsm) {
         this.gsm = gsm;
+        init();
     }
 
     public abstract void init();

@@ -1,5 +1,7 @@
 package com.stolenheart.game.main;
 
+import com.stolenheart.game.gamestate.GameStateManager;
+
 import javax.swing.JPanel;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -20,6 +22,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
     public GamePanel() {
         setPreferredSize(new Dimension(WIDTH, HEIGHT)); //the window's size is set to 800x600
+
+        addKeyListener(this); //allows the program to listen to user input
+        setFocusable(true);
 
         start();
     }

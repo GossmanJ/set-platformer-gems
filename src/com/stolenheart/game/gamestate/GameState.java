@@ -12,10 +12,15 @@ Though they're required, they won't each be used in every state. The methods are
 //this gamestate abstract class will be used as the basis for all other states of the game, like menus or gameplay screens.
 public abstract class GameState {
 
-    protected GameStateManager gsm;
+    protected GameStateManager gsm; //protected means it's accessible from different packages
+    public static double xOffset, yOffset; //public can be accessed from any class
 
     public GameState(GameStateManager gsm) {
         this.gsm = gsm;
+
+        this.xOffset = 0; //when the player moves, the map needs to move to compensate for the player moving
+        this.yOffset = 0; //same as above
+
         init();
     }
 

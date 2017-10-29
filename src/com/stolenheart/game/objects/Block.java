@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class Block extends Rectangle {
 
-    public static final int tileSize = 128;
+    public static final int tileSize = 64;
 
     public Block(int x, int y) {
         setBounds(x, y, tileSize, tileSize);

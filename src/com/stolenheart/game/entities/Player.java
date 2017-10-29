@@ -42,35 +42,33 @@ public class Player {
         //pushes the doubles into ints for the point calculations for collision
         int iX = (int)x;
         int iY = (int)y;
-        int gsmXOffset = (int)GameState.xOffset;
-        int gsmYOffset = (int)GameState.yOffset;
 
         for(int i = 0; i < b.length; i++) {
 
             //right side collision (Padding is added to each edge so the player can't get stuck)
-            if(Collision.playerBlock(new Point(iX + width + gsmXOffset, iY + gsmYOffset + 2), b[i])
-                    || Collision.playerBlock(new Point(iX + width + gsmXOffset, iY + height + gsmYOffset - 1), b[i])) {
+            if(Collision.playerBlock(new Point(iX + width + (int)GameState.xOffset + 5, iY + (int)GameState.yOffset + 2), b[i])
+                    || Collision.playerBlock(new Point(iX + width + (int)GameState.xOffset + 5, iY + height + (int)GameState.yOffset - 1), b[i])) {
                 //if the player tries to pass by the two points defined above, their movement completely stops
                 right = false;
             }
 
             //left side collision
-            if(Collision.playerBlock(new Point(iX + gsmXOffset - 1, iY + gsmYOffset + 2), b[i])
-                || Collision.playerBlock(new Point(iX + gsmXOffset - 1, iY + height + gsmYOffset - 1), b[i])) {
+            if(Collision.playerBlock(new Point(iX + (int)GameState.xOffset - 5, iY + (int)GameState.yOffset + 2), b[i])
+                || Collision.playerBlock(new Point(iX + (int)GameState.xOffset - 5, iY + height + (int)GameState.yOffset - 1), b[i])) {
                 //if the player tries to pass by the two points defined above, their movement completely stops
                 left = false;
             }
 
             //top collision
-            if(Collision.playerBlock(new Point(iX + gsmXOffset + 1, iY + gsmYOffset), b[i])
-                    || Collision.playerBlock(new Point(iX + width + gsmXOffset - 1, iY + gsmYOffset), b[i])){
+            if(Collision.playerBlock(new Point(iX + (int)GameState.xOffset + 1, iY + (int)GameState.yOffset), b[i])
+                    || Collision.playerBlock(new Point(iX + width + (int)GameState.xOffset - 1, iY + (int)GameState.yOffset), b[i])){
                 jump = false;
             }
 
-            //bottom collision I have no clue how the first point calculation actually works, but it started working when I put five in and I don't want to break it.
-            if(Collision.playerBlock(new Point(iX + width + gsmXOffset - 5, iY + height + gsmYOffset + 4), b[i])
-                    || Collision.playerBlock(new Point(iX + width + gsmXOffset - 1, iY + gsmYOffset + 2), b[i])) {
-                y = b[i].getY() - height - GameState.yOffset;
+            //bottom collision
+            if(Collision.playerBlock(new Point(iX + width + (int)GameState.xOffset + 2, iY + height + (int)GameState.yOffset + 4), b[i])
+                    || Collision.playerBlock(new Point(iX + (int)GameState.xOffset - 1, iY + height + (int)GameState.yOffset + 4), b[i])) {
+                y = b[i].getY() - height - GameState.yOffset - 1;
                 fall = false;
                 topCollision = true;
             }
@@ -93,7 +91,7 @@ public class Player {
             GameState.xOffset -= moveSpeed;
         }
 
-        if(jump){
+        if(jump && !fall){
             GameState.yOffset -= currentJumpSpeed; //player jumps upward
             currentJumpSpeed -= .1; //jump gradually slows to a stop
             if(currentJumpSpeed <=0){
@@ -124,7 +122,7 @@ public class Player {
     public void keyPressed(int k) {
         if(k == KeyEvent.VK_D || k == KeyEvent.VK_RIGHT) right = true;
         if(k == KeyEvent.VK_A || k == KeyEvent.VK_LEFT) left = true;
-        if(k == KeyEvent.VK_SPACE || k == KeyEvent.VK_W) jump = true;
+        if(k == KeyEvent.VK_SPACE && !jump && !fall || k == KeyEvent.VK_W && !jump && !fall) jump = true;
     }
 
     //key releases for various actions

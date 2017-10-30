@@ -1,10 +1,9 @@
 package com.stolenheart.game.entities;
 
 import com.stolenheart.game.gamestate.GameState;
-import com.stolenheart.game.main.Game;
 import com.stolenheart.game.main.GamePanel;
 import com.stolenheart.game.objects.Block;
-import com.stolenheart.game.physics.Collision;
+import com.stolenheart.game.objects.Collision;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;

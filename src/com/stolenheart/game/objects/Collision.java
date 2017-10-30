@@ -1,4 +1,4 @@
-package com.stolenheart.game.physics;
+package com.stolenheart.game.objects;
 
 import java.awt.Point;
 

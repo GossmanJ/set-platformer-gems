@@ -1,15 +1,4 @@
-package com.stolenheart.enemies;
-
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.g2d.Batch;
-import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
-import com.badlogic.gdx.math.Vector2;
-import com.stolenheart.entities.BaseEnt;
-import com.stolenheart.util.Collision;
-import com.stolenheart.util.Gravity;
-
-public class wat extends BaseEnt {
+public class easyBois extends BaseEnt {
     private TiledMapTileLayer collisionLayer;
     Vector2 vel = new Vector2();
     float oldX, oldY;
@@ -17,7 +6,7 @@ public class wat extends BaseEnt {
     float sideSpeed = -20;
     boolean wasColliding;
 
-    public wat(Sprite sprite, TiledMapTileLayer collisionLayer){
+    public easyBois(Sprite sprite, TiledMapTileLayer collisionLayer){
         super(sprite);
         this.collisionLayer = collisionLayer;
         wasColliding = false;
@@ -79,4 +68,3 @@ public class wat extends BaseEnt {
     public TiledMapTileLayer getCollisionLayer() {
         return collisionLayer;
     }
-}

@@ -1,0 +1,4 @@
+public player(Texture texture){
+
+
+    }

@@ -1,13 +1,13 @@
 package com.stolenheart.game;
 
-import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.screens.startup;
-import com.badlogic.gdx.Game;
-import java.awt.*;
+		import com.badlogic.gdx.ApplicationAdapter;
+		import com.badlogic.gdx.Gdx;
+		import com.badlogic.gdx.graphics.GL20;
+		import com.badlogic.gdx.graphics.Texture;
+		import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+		import com.screens.startup;
+		import com.badlogic.gdx.Game;
+		import java.awt.*;
 
 public class MainGame extends Game {
 
@@ -18,27 +18,27 @@ public class MainGame extends Game {
 	public double height = screenSize.height;
 
 	@Override
-	public void create () {
+	public void create() {
 		setScreen(new StartUp(this));
 	}
 
 	@Override
-	public void render () {
+	public void render() {
 		super.render();
 	}
 
 	@Override
-	public void dispose () {
+	public void dispose() {
 		super.dispose();
 	}
 
 	@Override
-	public void pause(){
+	public void pause() {
 		super.pause();
 	}
 
 	@Override
-	public void resume(){
+	public void resume() {
 		super.resume();
 	}
 }

@@ -56,8 +56,7 @@ public class MainMenu implements Screen {
         txtBtnStyle.pressedOffsetX = 1;
         txtBtnStyle.pressedOffsetY = -1;
         txtBtnStyle.font = largeB;
-
-        btnPlay = new TextButton("Play", txtBtnStyle);
+/*
         btnPlay.addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event, float x, float y) {
@@ -66,7 +65,7 @@ public class MainMenu implements Screen {
             }
         });
         btnPlay.pad(5);
-
+*/
         btnLoad = new TextButton("Load Game", txtBtnStyle);
         btnLoad.addListener(new ClickListener(){
             @Override

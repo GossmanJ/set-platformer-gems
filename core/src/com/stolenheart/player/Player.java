@@ -1,12 +1,11 @@
-package com.stolenheart.player;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
-import com.trifluxsoftware.set.entities.BaseEnt;
-import com.trifluxsoftware.set.util.Collision;
-import com.trifluxsoftware.set.util.Gravity;
+import com.stolenheart.entities.BaseEnt;
+import com.stolenheart.player.PlayerM;
+
 
 
 public class Player extends BaseEnt {
@@ -19,7 +18,7 @@ public class Player extends BaseEnt {
     public Player(Sprite sprite, TiledMapTileLayer collisionLayer) {
         super(sprite);
         this.collisionLayer = collisionLayer;
-        setScale(2.1);
+        setScale(2);
         setSize((float)(getWidth() * 1.5), getHeight() * 2);
         Gdx.input.setInputProcessor(movement);
     }
@@ -31,7 +30,7 @@ public class Player extends BaseEnt {
     }
 
     public void update(float delta) {
-        Collision collision = new Collision(this, collisionLayer);
+/*        Collision collision = new Collision(this, collisionLayer);
         new Gravity(movement.velocity, movement.speed, movement.gravity, delta);
 
         float oldX = getX(), oldY = getY();
@@ -59,7 +58,7 @@ public class Player extends BaseEnt {
             setY(oldY);
             movement.velocity.y = 0;
         }
-
+*/
     }
 
     public TiledMapTileLayer getCollisionLayer() {

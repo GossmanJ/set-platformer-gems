@@ -21,7 +21,7 @@ public class DesktopLauncher {
 		cfg.useGL30 = true;
 		cfg.width = 800; //(int)width
 		cfg.height = 600; //(int)height
-		//cfg.fullscreen = true;
+		cfg.fullscreen = false;
 
 		new LwjglApplication(new MainGame(), cfg);
 	}

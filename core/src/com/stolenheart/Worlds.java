@@ -30,7 +30,7 @@ public class World1 implements Screen{
 
     @Override
     public void show() {
-        map = new TmxMapLoader().load("maps/world1a.tmx");
+        map = new TmxMapLoader().load("maps/world1.tmx");
 
         orthRenderer = new OrthogonalTiledMapRenderer(map);
 

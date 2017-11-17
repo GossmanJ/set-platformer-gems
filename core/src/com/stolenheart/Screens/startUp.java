@@ -1,4 +1,4 @@
-package com.stolenheart.screens;
+package com.stolenheart.Screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.stolenheart.game.MainGame;
+
 
 public class StartUp implements Screen {
     private final MainGame game;
@@ -23,7 +24,7 @@ public class StartUp implements Screen {
     public void show() {
         startupBatch = new SpriteBatch();
 
-        Texture logoTexture = new Texture("");
+        Texture logoTexture = new Texture("Downloads/8280.png");
         logo = new Sprite(logoTexture);
         logo.setX(Gdx.graphics.getWidth() / 2 - (logo.getWidth() / 2));
         logo.setY(Gdx.graphics.getHeight() / 2);
@@ -43,6 +44,7 @@ public class StartUp implements Screen {
         if(elapsed > 5 || Gdx.input.isTouched()){ //Shortly display the startup screen with our logo
             System.out.println(elapsed);
             game.setScreen(new MainMenu(game));
+
         }
     }
 

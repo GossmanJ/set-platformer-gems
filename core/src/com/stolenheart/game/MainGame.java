@@ -1,7 +1,7 @@
 package com.stolenheart.game;
 
 
-import com.stolenheart.screens.*;
+import com.stolenheart.Screens.StartUp;
 import com.badlogic.gdx.Game;
 import java.awt.*;
 
@@ -15,7 +15,7 @@ public class MainGame extends Game {
 
     @Override
     public void create() {
-        setScreen(new StartUp(this));
+       // setScreen(new StartUp(this));
     }
 
     @Override

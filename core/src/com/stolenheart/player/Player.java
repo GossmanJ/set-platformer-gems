@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.stolenheart.entities.BaseEnt;
-import com.stolenheart.player.PlayerM;
+import com.stolenheart.Player.PlayerM;
 
 
 

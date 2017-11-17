@@ -1,4 +1,4 @@
-package com.stolenheart.screens;
+package com.stolenheart.Screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -58,10 +58,9 @@ public class MainMenu implements Screen {
         txtBtnStyle.font = largeB;
 
         btnPlay.addListener(new ClickListener(){
-        btnPlay = new TextButton("Play Game", txtBtnStyle);
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                game.setScreen(new World1());
+                //game.setScreen(new World1());
                 dispose();
             }
         });
@@ -71,7 +70,7 @@ public class MainMenu implements Screen {
         btnLoad.addListener(new ClickListener(){
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                game.setScreen(new LoadScreen(game));
+                //game.setScreen(new LoadScreen(game));
                 dispose();
             }
         });

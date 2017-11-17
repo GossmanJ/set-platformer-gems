@@ -1,4 +1,4 @@
-package com.stolenheart.screens;
+package com.stolenheart.Screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -24,7 +24,7 @@ public class StartUp implements Screen {
     public void show() {
         startupBatch = new SpriteBatch();
 
-        Texture logoTexture = new Texture("/home/ryan/DabSquadStudios.png");
+        Texture logoTexture = new Texture("Downloads/8280.png");
         logo = new Sprite(logoTexture);
         logo.setX(Gdx.graphics.getWidth() / 2 - (logo.getWidth() / 2));
         logo.setY(Gdx.graphics.getHeight() / 2);

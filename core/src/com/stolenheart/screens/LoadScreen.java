@@ -1,4 +1,4 @@
-package com.stolenheart.screens;
+package com.stolenheart.Screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;

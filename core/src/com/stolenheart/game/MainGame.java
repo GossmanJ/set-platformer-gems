@@ -7,7 +7,7 @@ import java.awt.*;
 
 public class MainGame extends Game {
 
-    public static final String TITLE = "SET PLATFORMER", VERSION = "v1.0";
+    public static final String TITLE = "STOLEN HEART created by Ryan and Jake <3", VERSION = "v0.001";
 
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
     public double width = screenSize.width;

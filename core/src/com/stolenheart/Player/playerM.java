@@ -1,4 +1,4 @@
-package com.stolenheart.player;
+package com.stolenheart.Player;
 
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;

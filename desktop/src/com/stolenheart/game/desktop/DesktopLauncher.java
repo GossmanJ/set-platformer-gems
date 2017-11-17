@@ -18,9 +18,9 @@ public class DesktopLauncher {
 
 		cfg.title = MainGame.TITLE + " " + MainGame.VERSION;
 		cfg.vSyncEnabled = true;
-		cfg.useGL30 = true;
-		cfg.width = 1080; //(int)width
-		cfg.height = 1920; //(int)height
+		cfg.useGL30 = false;
+		cfg.width = 800; //(int)width
+		cfg.height = 600; //(int)height
 		cfg.fullscreen = false;
 		cfg.forceExit = false;
 

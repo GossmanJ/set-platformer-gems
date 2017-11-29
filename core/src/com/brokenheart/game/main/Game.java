@@ -32,6 +32,8 @@ public class Game extends ApplicationAdapter {
 		Gdx.gl.glClearColor(33/255f, 34/255f, 40/255f, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
+		System.out.println("" + Gdx.graphics.getDeltaTime());
+
 		if(Gdx.input.isKeyPressed(Input.Keys.UP))
 		{
 

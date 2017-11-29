@@ -2,7 +2,7 @@ package com.brokenheart.game.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.brokenheart.game.Game;
+import com.brokenheart.game.main.Game;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {

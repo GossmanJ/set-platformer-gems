@@ -1,4 +1,4 @@
-package com.brokenheart.game;
+package com.brokenheart.game.world;
 
 public enum TileType {
 }

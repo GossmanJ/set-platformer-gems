@@ -1,6 +1,7 @@
 package com.brokenheart.game.world;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTile;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
@@ -18,13 +19,19 @@ public class TiledGameMap extends GameMap{
     }
 
     @Override
-    public void render(OrthographicCamera camera) {
+    public void render(OrthographicCamera camera, SpriteBatch batch) {
      tiledMapRenderer.setView(camera);
      tiledMapRenderer.render();
+     batch.setProjectionMatrix(camera.combined);
+     batch.begin();
+     super.render(camera, batch);
+     batch.end();
+
     }
 
     @Override
     public void update(float delta) {
+        super.update(delta);
     }
 
     @Override
@@ -52,8 +59,9 @@ public class TiledGameMap extends GameMap{
         return ((TiledMapTileLayer) tiledMap.getLayers().get(0)).getWidth();
     }
 
+
     @Override
-    public int getHeigt() {
+    public int getHeight() {
         return ((TiledMapTileLayer) tiledMap.getLayers().get(0)).getHeight();
     }
 
